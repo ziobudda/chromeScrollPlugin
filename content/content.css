@@ -1,0 +1,79 @@
+#autoscroll-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483647;
+  background: rgba(15, 22, 41, 0.95);
+  border-top: 2px solid #a78bfa;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  backdrop-filter: blur(4px);
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+}
+
+#autoscroll-bar.as-visible {
+  transform: translateY(0);
+}
+
+#autoscroll-label {
+  color: #a78bfa;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+#autoscroll-progress-track {
+  flex: 1;
+  height: 4px;
+  background: #1e293b;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#autoscroll-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #a78bfa;
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+#autoscroll-countdown {
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 42px;
+  text-align: center;
+}
+
+#autoscroll-pause-btn,
+#autoscroll-stop-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#autoscroll-pause-btn {
+  background: #334155;
+  color: #a78bfa;
+  border: 1px solid #a78bfa;
+}
+#autoscroll-pause-btn:hover { background: #3f4f6a; }
+
+#autoscroll-stop-btn {
+  background: #7f1d1d;
+  color: white;
+}
+#autoscroll-stop-btn:hover { background: #991b1b; }

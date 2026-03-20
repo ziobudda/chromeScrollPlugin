@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">AUTO SCROLL</div>
+    <label class="label" for="duration">DURATA SCROLL</label>
+    <input
+      id="duration"
+      class="duration-input"
+      type="text"
+      placeholder="MM:SS"
+      maxlength="6"
+      autocomplete="off"
+      spellcheck="false"
+    >
+    <div class="hint">es. 05:30 oppure 330 (secondi)</div>
+    <div id="error" class="error" aria-live="polite"></div>
+    <button id="start-btn" class="start-btn">AVVIA</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
